@@ -1,0 +1,16 @@
+enum OrderStatus {
+  Filled
+  Canceled
+}
+
+type Order @entity {
+  id: ID! # hash
+  maker: Bytes!
+  makeAssetClass: Bytes!
+  makeData: Bytes!
+  taker: Bytes
+  takeAssetClass: Bytes!
+  takeData: Bytes!
+  fill: BigInt
+  status: OrderStatus!
+}

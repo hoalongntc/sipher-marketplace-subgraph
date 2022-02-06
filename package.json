@@ -1,0 +1,22 @@
+{
+  "name": "sipher-marketplace",
+  "license": "UNLICENSED",
+  "scripts": {
+    "postinstall": "patch-package",
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ sipher-marketplace",
+    "create-local": "graph create --node http://localhost:8020/ sipher-marketplace",
+    "remove-local": "graph remove --node http://localhost:8020/ sipher-marketplace",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 sipher-marketplace"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.26.0",
+    "@graphprotocol/graph-ts": "0.24.1",
+    "@rarible/sdk": "^0.8.29",
+    "web3": "^1.7.0"
+  },
+  "devDependencies": {
+    "patch-package": "^6.4.7"
+  }
+}
